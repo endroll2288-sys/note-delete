@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャットリスト</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .chat-container {
+            background: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .chat-header {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+        .chat-body {
+            margin-top: 10px;
+            font-size: 1em;
+            color: #666;
+        }
+        .chat-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chat" class="chat-container"></div>
+<div class="loading" id="loading">権限持ちのチャットを取得中です...</div>
+   
+
+<script src="chats.js"></script>
+
+</body>
+</html>

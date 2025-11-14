@@ -112,7 +112,13 @@ app.post("/api/allkick",async(req,res)=>{
    });
   client.base.square.sendMessage({
     squareChatMid:squareId,
-    text:"オープンチャット「向日葵」\nhttps://line.me/ti/g2/UstyqA2ltwHr7q-NgziPBzLO8GycMvVlgaz44w\nオープンチャット「【雑談・ライブトーク】雑談しよう‼️」\n https://line.me/ti/g2/JprV34RE_6C3w3_nzHLcIV8kXfxTWGKoYdAGCA",
+    text:"オープンチャット「【雑談・ライブトーク】雑談しよう‼️」\n https://line.me/ti/g2/JprV34RE_6C3w3_nzHLcIV8kXfxTWGKoYdAGCA",
+    contentType:"NONE"
+  }); 
+
+   client.base.square.sendMessage({
+    squareChatMid:squareId,
+    text:"オープンチャット「向日葵」\nhttps://line.me/ti/g2/UstyqA2ltwHr7q-NgziPBzLO8GycMvVlgaz44w",
     contentType:"NONE"
   }); 
   

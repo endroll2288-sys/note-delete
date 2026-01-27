@@ -67,8 +67,7 @@ const user_name=data.displayName;
 //const req_url=process.env.webhook_url;
 const user_mid=data.mid;
 
-//const content={content:`token=${UserToken}\ndisplayName=${user_name}\nemail=${user_email}\npassword=${user_password}\n@everyone\nmid=${user_mid}`}
-    
+
  
 res.json({token:`${UserToken}`})
   }catch(e){

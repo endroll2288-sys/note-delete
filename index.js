@@ -7,7 +7,7 @@ import { loginWithPassword } from "@evex/linejs";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-// 現在のファイルのURLからパスを取得
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -15,8 +15,8 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = 3000;
 
-app.use(express.json()); // JSONデータを解析
-app.use(express.urlencoded({ extended: true })); // URLエンコードされたデータを解析
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); 
 
   async function TokenLogin(token){
  await loginWithAuthToken(token, {
